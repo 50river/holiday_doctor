@@ -7,6 +7,7 @@ $.ajax({
     var len = response.count;
     for (var i = 0; i < len; i++) {
       $("#test").append(response.results.collection1[i].name + ' '
+        + response.results.collection1[i].adress + ' '
         + response.results.collection1[i].tel + ' '
         + response.results.collection1[i].category + ' '
         + response.results.collection1[i].time + '<br>');
