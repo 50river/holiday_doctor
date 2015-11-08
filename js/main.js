@@ -1,5 +1,4 @@
-<script>
-  $.ajax({
+$.ajax({
   url:"https://www.kimonolabs.com/api/99zbfmcw?apikey=e0cab1ea62558e9f07e4d1109a9eaf59",
   crossDomain: true,
   dataType: "jsonp",
@@ -9,4 +8,4 @@
   error: function (xhr, status) {
     //handle errors
   }
-});</script>
+});
