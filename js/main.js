@@ -1,5 +1,5 @@
 $.ajax({
-  url:"https://www.kimonolabs.com/api/99zbfmcw?apikey=e0cab1ea62558e9f07e4d1109a9eaf59",
+  url:"https://www.kimonolabs.com/api/99zbfmcw?apikey=e0cab1ea62558e9f07e4d1109a9eaf59&kimmodify=1",
   crossDomain: true,
   dataType: "jsonp",
   success: function (response) {
