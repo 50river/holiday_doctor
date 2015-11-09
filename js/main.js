@@ -6,9 +6,9 @@ $.ajax({
     //Do something with the response
     var len = response.count;
     for (var i = 0; i < len; i++) {
-      $("#test").append(response.results.collection1[i].name + ' '
-        + response.results.collection1[i].adress + ' '
-        + response.results.collection1[i].tel + ' '
+      $("#test").append(response.results.collection1[i].name
+        + '<a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+response.results.collection1[i].adress+'">'+response.results.collection1[i].adress+'</a>'
+        + ' <a href="tel:'+ response.results.collection1[i].tel + '"> '+ response.results.collection1[i].tel+ '</a> '
         + response.results.collection1[i].category + ' '
         + response.results.collection1[i].time + '<br>');
     };
