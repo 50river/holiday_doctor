@@ -15,12 +15,6 @@ $.ajax({
             '<a data-toggle="collapse" data-parent="#accordion" href="#' + response.results.collection1[i].category + '">' +
             response.results.collection1[i].category + '</a></h4></div>' +
             '<div id="' + response.results.collection1[i].category + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>');
-        $("."+j).append('<ul><li class="name">' + response.results.collection1[i].name
-          + '</li><li class="category">' + response.results.collection1[i].category
-          + '</li><li class="time">'+ response.results.collection1[i].time
-          + '</li><li class="tel">' + ' <a href="tel:'+ response.results.collection1[i].tel + '"> '+ response.results.collection1[i].tel
-          + '</a></li><li class="adress"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+response.results.collection1[i].adress+'">'+response.results.collection1[i].adress
-          + '</a></li></ul>');
     cat_check = response.results.collection1[i].category;
     };
       $("."+j).append('<ul><li class="name">' + response.results.collection1[i].name
