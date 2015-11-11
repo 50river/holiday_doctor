@@ -24,9 +24,9 @@ $.ajax({
           j++;
           $("#accordion").append('<div class="panel panel-default">' +
             '<div class="panel-heading"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
-            '<a data-toggle="collapse" data-parent="#accordion" href="#'+response.results.collection1[i].category+ '">' +
+            '<a data-toggle="collapse" data-parent="#accordion" href="#'+response.results.collection1[i].category.charCodeAt(0)+ '">' +
             response.results.collection1[i].category + '</a></h4></div>' +
-            '<div id="' + response.results.collection1[i].category + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>');
+            '<div id="' + response.results.collection1[i].category.charCodeAt(0) + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>');
           cat_check = response.results.collection1[i].category;
         };
         $("."+j).append('<ul><li class="name">' + response.results.collection1[i].name
