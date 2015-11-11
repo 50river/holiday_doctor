@@ -3,12 +3,24 @@ body{
   'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
   Meiryo, メイリオ, sans-serif;
 }
-li, ul{list-style:none;}
-.name{font-size:1.8em;}
-.tel,.adress{font-size: 1.2em;}
-a { text-decoration: none;}
-a:hover { text-decoration: none;}
-.name{font-size:1.5em;}
+li, ul{
+  list-style:none;
+}
+.name{
+  font-size:1.8em;
+}
+.tel,.address{
+  font-size: 1.2em;
+}
+a {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: none;
+}
+.name{
+  font-size:1.5em;
+}
 .panel-title{
   color: #f5f5f5;
   font-size: 4.5em;
