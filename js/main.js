@@ -6,6 +6,7 @@ function scrollToElement(element){
 }
 
 function jsonLoaded(response){
+
     $(".date").append(
       'ののいち、白山の'+response.results.collection2[0].date + '当番医です。'
     );
@@ -32,47 +33,31 @@ function jsonLoaded(response){
         };
     };
     cat_check = '*****';
-
-    var accordion_element = $("#accordion");
-    var accordion_text = '';
-    var list_text = '';
-
     for (var i = 0; i < len; i++) {
         var collection = response.results.collection1[i]
         var category = cat[i];
         if (cat_check != category) {
             j++;
-            
-            if (list_text) {
-              accordion_text += createInsertElement(accordion_height, cat_check, j, list_text);
-              list_text = '';
-            }
+            var insertElement = $('<div class="panel panel-default">' +
+                              '<div class="panel-heading c'+j+'"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
+                              '<a data-toggle="collapse" data-parent="#accordion" href="#'+category+ '">' +
+                              category + '</a></h4></div>' +
+                              '<div id="' + category + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div><div class="check">必ず電話で医療機関に確認のうえ受診して下さい。</div></div></div>')
 
+            $("#accordion").append(insertElement);
             cat_check = category;
         };
-        list_text += '<ul><li class="name">' + collection.name + "</li>" + '<li class="category">' + collection.category + "</li>" + '<li class="time">' + collection.time + "</li>" + '<li class="tel">' + ' <a href="tel:' + collection.tel + '"> ' + collection.tel + "</a></li>" + '<li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q=' + collection.address + '">' + collection.address + "</a></li>" + '</ul>';
+        $("."+j).append('<ul><li class="name">' + collection.name + "</li>"
+          + '<li class="category">' + collection.category + "</li>"
+          + '<li class="time">'+ collection.time + "</li>"
+          + '<li class="tel">' + ' <a href="tel:'+ collection.tel + '"> '+ collection.tel + "</a></li>"
+          + '<li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+collection.address+'">'+collection.address +"</a></li>"
+          + '</ul>');
     };
-
-    if (list_text) {
-      accordion_text += createInsertElement(accordion_height, cat[len-1], j, list_text);
-    }
-
-    accordion_element.append(accordion_text);
-
     $(".panel").on("shown.bs.collapse", function() {
         scrollToElement(this)
     })
 
-}
-
-function createInsertElement(accordion_height, category, category_index, list_text) {
-  var insertElement = '<div class="panel panel-default">' +
-    '<div class="panel-heading c' + category_index + '"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
-    '<a data-toggle="collapse" data-parent="#accordion" href="#' + category + '">' +
-    category + '</a></h4></div>' +
-    '<div id="' + category + '" class="panel-collapse collapse"><div class="panel-body"><div>' + list_text + '</div><div class="check">必ず電話で医療機関に確認のうえ受診して下さい。</div></div></div>';
-
-  return insertElement;
 }
 
 $.ajax({
