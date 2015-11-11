@@ -14,30 +14,30 @@ $.ajax({
         cat_check = response.results.collection1[i].category;
         k++;};
       };
-    var accordion_height = WindowHeight / k;
-        if(k>5){
-            if (accordion_height<100) {accordion_height=100;};
-        };
-    cat_check = '*****';
-    for (var i = 0; i < len; i++) {
-      if (cat_check != response.results.collection1[i].category) {
-        j++;
-        $("#accordion").append('<div class="panel panel-default">' +
-          '<div class="panel-heading"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
-            '<a data-toggle="collapse" data-parent="#accordion" href="#' + response.results.collection1[i].category + '">' +
+      var accordion_height = WindowHeight / k;
+      if(k>5){
+        if (accordion_height<100) {accordion_height=100;};
+      };
+      cat_check = '*****';
+      for (var i = 0; i < len; i++) {
+        if (cat_check != response.results.collection1[i].category) {
+          j++;
+          $("#accordion").append('<div class="panel panel-default">' +
+            '<div class="panel-heading"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
+            '<a data-toggle="collapse" data-parent="#accordion" href="#'+response.results.collection1[i].category+ '">' +
             response.results.collection1[i].category + '</a></h4></div>' +
             '<div id="' + response.results.collection1[i].category + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>');
-    cat_check = response.results.collection1[i].category;
-    };
-      $("."+j).append('<ul><li class="name">' + response.results.collection1[i].name
+          cat_check = response.results.collection1[i].category;
+        };
+        $("."+j).append('<ul><li class="name">' + response.results.collection1[i].name
           + '</li><li class="category">' + response.results.collection1[i].category
           + '</li><li class="time">'+ response.results.collection1[i].time
           + '</li><li class="tel">' + ' <a href="tel:'+ response.results.collection1[i].tel + '"> '+ response.results.collection1[i].tel
           + '</a></li><li class="adress"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+response.results.collection1[i].adress+'">'+response.results.collection1[i].adress
           + '</a></li></ul>');
-  };
-},
-  error: function (xhr, status) {
+      };
+    },
+    error: function (xhr, status) {
     //handle errors
   }
 });
