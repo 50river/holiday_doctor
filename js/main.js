@@ -11,14 +11,14 @@ $.ajax({
     var cat_check = '*****';
     for (var i = 0; i < len; i++) {
       if (cat_check != response.results.collection1[i].category) {
+        cat_check = response.results.collection1[i].category;
         k++;};
       };
     var accordion_height = WindowHeight / k;
-    if (window.devicePixelRatio == 2){
-    accordion_height= accordion_height*2;};
         if(k>5){
             if (accordion_height<100) {accordion_height=100;};
         };
+    cat_check = '*****';
     for (var i = 0; i < len; i++) {
       if (cat_check != response.results.collection1[i].category) {
         j++;
