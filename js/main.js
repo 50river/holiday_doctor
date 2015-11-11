@@ -33,7 +33,7 @@ $.ajax({
           + '</li><li class="category">' + response.results.collection1[i].category
           + '</li><li class="time">'+ response.results.collection1[i].time
           + '</li><li class="tel">' + ' <a href="tel:'+ response.results.collection1[i].tel + '"> '+ response.results.collection1[i].tel
-          + '</a></li><li class="adress"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+response.results.collection1[i].adress+'">'+response.results.collection1[i].adress
+          + '</a></li><li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+response.results.collection1[i].address+'">'+response.results.collection1[i].address
           + '</a></li></ul>');
       };
     },
