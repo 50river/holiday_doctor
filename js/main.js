@@ -8,10 +8,12 @@ $.ajax({
     var WindowHeight = $(window).height();
     var j = 0;
     var k = 0;
+    var cat = [];
     var cat_check = '*****';
     for (var i = 0; i < len; i++) {
-      if (cat_check != response.results.collection1[i].category) {
-        cat_check = response.results.collection1[i].category;
+      cat[i] = response.results.collection1[i].category.replace( " \n" , "" ) ;
+      if (cat_check != cat[i]) {
+        cat_check = cat[i];
         k++;};
       };
       var accordion_height = WindowHeight / k;
@@ -20,17 +22,17 @@ $.ajax({
       };
       cat_check = "*****";
       for (var i = 0; i < len; i++) {
-        if (cat_check != response.results.collection1[i].category) {
+        if (cat_check != cat[i]) {
           j++;
           $("#accordion").append('<div class="panel panel-default">' +
             '<div class="panel-heading c'+j+'"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
-            '<a data-toggle="collapse" data-parent="#accordion" href="#'+response.results.collection1[i].category.charCodeAt(0)+ '">' +
-            response.results.collection1[i].category + '</a></h4></div>' +
-            '<div id="' + response.results.collection1[i].category.charCodeAt(0) + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>');
-          cat_check = response.results.collection1[i].category;
+            '<a data-toggle="collapse" data-parent="#accordion" href="#'+cat[i]+ '">' +
+            cat[i] + '</a></h4></div>' +
+            '<div id="' + cat[i] + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>');
+          cat_check = cat[i];
         };
         $("."+j).append('<ul><li class="name">' + response.results.collection1[i].name
-          + '</li><li class="category">' + response.results.collection1[i].category
+          + '</li><li class="category">' + cat[i]
           + '</li><li class="time">'+ response.results.collection1[i].time
           + '</li><li class="tel">' + ' <a href="tel:'+ response.results.collection1[i].tel + '"> '+ response.results.collection1[i].tel
           + '</a></li><li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+response.results.collection1[i].address+'">'+response.results.collection1[i].address
