@@ -42,7 +42,7 @@ function jsonLoaded(response){
                               '<div class="panel-heading c'+j+'"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
                               '<a data-toggle="collapse" data-parent="#accordion" href="#'+category+ '">' +
                               category + '</a></h4></div>' +
-                              '<div id="' + category + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div></div></div></div>')
+                              '<div id="' + category + '" class="panel-collapse collapse"><div class="panel-body"><div class="' + j + '"></div><div class="check">必ず電話で医療機関に確認のうえ受診して下さい。</div></div></div>')
 
             $("#accordion").append(insertElement);
             cat_check = category;
