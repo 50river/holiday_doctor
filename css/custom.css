@@ -5,7 +5,7 @@ body{
 }
 li, ul{list-style:none;}
 .name{font-size:1.8em;}
-.tel,.adress{font-size: 1.2em;}
+.tel,.address{font-size: 1.2em;}
 a { text-decoration: none;}
 a:hover { text-decoration: none;}
 .date{
