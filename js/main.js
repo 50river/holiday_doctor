@@ -51,7 +51,7 @@ function jsonLoaded(response){
           + '<li class="category">' + collection.category + "</li>"
           + '<li class="time">'+ collection.time + "</li>"
           + '<li class="tel">' + ' <a href="tel:'+ collection.tel + '"> '+ collection.tel + "</a></li>"
-          + '<li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+collection.adress+'">'+collection.adress +"</a></li>"
+          + '<li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q='+collection.address+'">'+collection.address +"</a></li>"
           + '</ul>');
     };
     $(".panel").on("shown.bs.collapse", function() {
