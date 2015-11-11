@@ -21,6 +21,14 @@ a:hover {
 .name{
   font-size:1.5em;
 }
+
+.date{
+  font-size:1.4em;
+  position:fixed; z-index:100;
+  text-align: center;
+  width: 100%;
+  color: #7f8c8d;
+}
 .panel-title{
   color: #f5f5f5;
   font-size: 4.5em;
