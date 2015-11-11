@@ -11,5 +11,11 @@ a:hover { text-decoration: none;}
 .name{font-size:1.5em;}
 .panel-title{
   font-size: 4.5em;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
+}
+.panel-heading{
+  display:table;
+  width: 100%;
 }
