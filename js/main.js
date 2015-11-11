@@ -4,7 +4,7 @@ $.ajax({
   dataType: "json",
   success: function (response) {
     //Do something with the response
-    var len = response.count;
+    var len = response.results.collection1.length;
     var WindowHeight = $(window).height();
     var j = 0;
     var k = 0;
@@ -18,7 +18,7 @@ $.ajax({
       if(k>5){
         if (accordion_height<100) {accordion_height=100;};
       };
-      cat_check = '*****';
+      cat_check = "*****";
       for (var i = 0; i < len; i++) {
         if (cat_check != response.results.collection1[i].category) {
           j++;
