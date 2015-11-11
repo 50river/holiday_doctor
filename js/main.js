@@ -4,6 +4,9 @@ $.ajax({
   dataType: "json",
   success: function (response) {
     //Do something with the response
+    $(".date").append(
+      'ののいち、白山の'+response.results.collection2[0].date + '当番医です。'
+    );
     var len = response.results.collection1.length;
     var WindowHeight = $(window).height();
     var j = 0;

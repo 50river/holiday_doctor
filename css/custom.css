@@ -8,6 +8,13 @@ li, ul{list-style:none;}
 .tel,.adress{font-size: 1.2em;}
 a { text-decoration: none;}
 a:hover { text-decoration: none;}
+.date{
+  font-size:1.4em;
+  position:fixed; z-index:100;
+  text-align: center;
+  width: 100%;
+  color: #7f8c8d;
+}
 .name{font-size:1.5em;}
 .panel-title{
   color: #f5f5f5;
