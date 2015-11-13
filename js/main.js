@@ -66,9 +66,8 @@ function jsonLoaded(response){
 }
 function createInsertElement(accordion_height, category, category_index, list_text) {
   var insertElement = '<div class="panel panel-default">' +
-    '<div class="panel-heading c' + category_index + '"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
-    '<a data-toggle="collapse" data-parent="#accordion" href="#' + category + '">' +
-    category + '</a></h4></div>' +
+    '<a data-toggle="collapse" data-parent="#accordion" href="#' + category + '">' +'<div class="panel-heading c' + category_index + '"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +
+    category + '</h4></div></a>' +
     '<div id="' + category + '" class="panel-collapse collapse"><div class="panel-body"><div>' + list_text + '</div><div class="check">必ず電話で医療機関に確認のうえ受診して下さい。</div></div></div></div>';
 
   return insertElement;
