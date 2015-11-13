@@ -18,7 +18,7 @@ function jsonLoaded(response){
 
     for (var i = 0; i < len; i++) {
       // \nは  「スペース,改行」ではなく。なぜか「文字コード160と改行」
-      cat[i] = response.results.collection1[i].category.replace(" \n" , "" ) ;
+      cat[i] = response.results.collection1[i].category.replace(" \n" , "・" ) ;
       if (cat_check != cat[i]) {
         cat_check = cat[i];
         k++;
