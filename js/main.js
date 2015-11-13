@@ -50,7 +50,7 @@ function jsonLoaded(response){
 
             cat_check = category;
         };
-        list_text += '<ul><li class="name">' + collection.name + "</li>" + '<li class="category">' + collection.category + "</li>" + '<li class="time">' + collection.time + "</li>" + '<li class="tel">' + ' <a href="tel:' + collection.tel + '"> ' + collection.tel + "</a></li>" + '<li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q=' + collection.address + '">' + collection.address + "</a></li>" + '</ul>';
+        list_text += '<ul><li class="name">' + collection.name + "</li>" + '<li class="category">' + collection.category + "</li>" + '<li class="time">' + collection.time + "</li>" + '<li class="tel">' + ' <a href="tel:' + collection.tel + '"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> ' + collection.tel + "</a></li>" + '<li class="address"><a href="http://maps.google.co.jp/maps?hl=ja&ie=UTF8&q=' + collection.address + '"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>' + collection.address + "</a></li>" + '</ul>';
     };
 
     if (list_text) {

@@ -15,10 +15,12 @@ a:hover { text-decoration: none;}
   width: 100%;
   color: #f5f5f5;
 }
-.name{font-size:1.5em;}
 .check{
   width: 100%;
   text-align: left;
+}
+h4{
+  font-weight: bold;
 }
 .panel-title{
   color: #f5f5f5;
@@ -42,4 +44,7 @@ ul{
 }
 .panel-heading.c1{
   background-color: #56bdb2;
+}
+.discription{
+  height: 100vh;
 }
