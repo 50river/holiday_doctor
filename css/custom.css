@@ -6,7 +6,9 @@ body{
 li, ul{list-style:none;}
 .name{font-size:1.8em;}
 .tel,.address{font-size: 1.2em;}
-a { text-decoration: none;}
+a {
+  text-decoration: none;
+}
 a:hover { text-decoration: none;}
 .date{
   font-size:1.4em;
@@ -47,4 +49,19 @@ ul{
 }
 .discription{
   height: 100vh;
+}
+li.address,li.tel{
+  background-color: white;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 3px;
+  height: 30px;
+
+vertical-align: middle;
+}
+li.name{
+  font-weight: bold;
+}
+li.time{
+  font-size: 1.5em;
 }
