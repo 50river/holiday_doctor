@@ -7,7 +7,7 @@ function scrollToElement(element){
 
 function jsonLoaded(response){
     $(".date").append(
-      'ののいち、白山の'+response.results.collection2[0].date + '当番医です。'
+      response.results.collection2[0].date + 'の当番医です。'
     );
 
     var len = response.results.collection1.length;
@@ -18,7 +18,7 @@ function jsonLoaded(response){
 
     for (var i = 0; i < len; i++) {
       // \nは  「スペース,改行」ではなく。なぜか「文字コード160と改行」
-      cat[i] = response.results.collection1[i].category.replace(" \n" , "・" ) ;
+      cat[i] = response.results.collection1[i].category.replace(" \n" , " " ) ;
       if (cat_check != cat[i]) {
         cat_check = cat[i];
         k++;
