@@ -51,6 +51,7 @@ ul{
   height: 100vh;
 }
 li.address,li.tel{
+  color: #34495e;
   background-color: white;
   text-align: center;
   margin-top: 5px;
