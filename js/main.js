@@ -44,7 +44,8 @@ function jsonLoaded(response){
             if (list_text.length > 0) {
               accordion_text += createInsertElement(accordion_height, cat_check, j, list_text);
               list_text = '';
-              j++;
+              if(j==1)j=0;
+              else if(j!=1)j=1;
             }
 
             cat_check = category;
@@ -63,7 +64,6 @@ function jsonLoaded(response){
     })
 
 }
-
 function createInsertElement(accordion_height, category, category_index, list_text) {
   var insertElement = '<div class="panel panel-default">' +
     '<div class="panel-heading c' + category_index + '"style="height:' + accordion_height + 'px" >' + '<h4 class="panel-title">' +

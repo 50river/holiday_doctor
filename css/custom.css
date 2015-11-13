@@ -31,11 +31,11 @@ a:hover { text-decoration: none;}
   display:table;
   width: 100%;
 }
-.panel-heading.c1{
-  background-color: #D5EAD8;
+.panel-heading.c0{
+  background-color: #56bdb2;
 }
-.panel-heading.c2{
-  background-color: #C1DB81;
+.panel-heading.c1{
+  background-color: #04b3aa;
 }
 .panel-heading.c3{
   background-color: #BCE2E8;
