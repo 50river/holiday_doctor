@@ -10,7 +10,7 @@ a {
   text-decoration: none;
 }
 a:hover { text-decoration: none;}
-.date{
+#date{
   font-size:1.4em;
   position:fixed; z-index:100;
   text-align: center;

@@ -1,12 +1,5 @@
-function scrollToElement(element){
-      var accordion_offset = $(element).offset().top;
-      $("html,body").animate({
-        scrollTop: accordion_offset
-      }, 50);
-}
-
 function jsonLoaded(response){
-    $(".date").append(
+    $("#date").append(
       response.results.collection2[0].date + 'の当番医です。'
     );
 
