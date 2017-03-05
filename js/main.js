@@ -67,7 +67,8 @@ function createInsertElement(accordion_height, category, category_index, list_te
 }
 
 $.ajax({
-  url:"https://www.kimonolabs.com/api/99zbfmcw?apikey=e0cab1ea62558e9f07e4d1109a9eaf59&kimmodify=1",
+//  url:"https://www.kimonolabs.com/api/99zbfmcw?apikey=e0cab1ea62558e9f07e4d1109a9eaf59&kimmodify=1",
+  url:"https://pharaohkj.github.io/holiday_doctor/data.json",
   crossDomain: true,
   dataType: "json",
   success: function (response) {
