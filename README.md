@@ -5,7 +5,7 @@
 devブランチにプルリクを頂けるとスムーズに確認からmasterブランチへのマージまで出来るのでよろしくお願いします。
 
 ## スクレイピング
-[石川県休日当番医情報](http://i-search.pref.ishikawa.jp/toban/index.php?a=3)をスクレイパー(https://github.com/PharaohKJ/holiday_doctor_scraper))でスクレイプし、その結果を `data.json` に定期更新しています。
+[石川県休日当番医情報](http://i-search.pref.ishikawa.jp/toban/index.php?a=3)を[スクレイパー](https://github.com/PharaohKJ/holiday_doctor_scraper)でスクレイプし、その結果を `data.json` に定期更新しています。
 
 ## デプロイ
 公開はGitHub Pagesを用いて運用しています。更新作業は、毎日0時から1時の間に `pull` > 更新 > `commit` & `push` > `gh-pages` としてcron相当のもので行っています。
